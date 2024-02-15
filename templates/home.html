@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phish Detector</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="login-header">
+            <h1>PHISHING SITE DETECTION USING MACHINE LEARNING</h1>
+            <h2>24S8EOW409</h2>
+        </div>
+
+        <div class="login">
+            <form action="{{ url_for('prediction')}}" method="post">
+                <input type="text" name="inputUrl" placeholder="Enter the URL" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Result</button>
+            </form>
+            <br>
+            {{ Result }}
+            <br><br>
+            <div>
+                <h3>Model Trained & Devloped by:</h3>
+                <h5>SOUNDARYA S (202CB146)</h5>
+                <h5>KAVIVARSINI S (202CB116)</h5>
+                <h5>DHARANISH A (212CB502)</h5>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
